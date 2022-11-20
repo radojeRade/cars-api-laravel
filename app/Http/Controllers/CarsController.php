@@ -25,7 +25,7 @@ class CarsController extends Controller
 
         // return $cars;
 
-        $perPage = $request->query('per_page', 5);
+        $perPage = $request->query('per_page', 30);
         $brand = $request->query('brand');
         $model = $request->query('model');
 
@@ -66,10 +66,10 @@ class CarsController extends Controller
             'brand' => $validated['brand'], // moze i ovako validacija
             'model' => $validated['model'],
             'year' => $validated['year'],
-            'max_speed' => $validated['max_speed'],
-            'is_automatic' => $validated['is_automatic'],
+            'max_speed' => $validated['maxSpeed'],
+            'is_automatic' => $validated['isAutomatic'],
             'engine' => $validated['engine'],
-            'number_of_doors' => $validated['number_of_doors'],
+            'number_of_doors' => $validated['numberOfDoors'],
             
         ]);
         return $car;

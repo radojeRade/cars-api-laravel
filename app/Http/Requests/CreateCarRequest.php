@@ -28,10 +28,10 @@ class CreateCarRequest extends FormRequest
                 'brand' => 'required|min:2',
                 'model' => 'required|min:2',
                 'year' => 'required|numeric',
-                'max_speed' => 'numeric|between:20,300',
-                'is_automatic' => 'required',
+                'maxSpeed' => 'numeric|between:20,300',
+                'isAutomatic' => 'boolean',
                 'engine' => 'required',
-                'number_of_doors' => 'required|numeric|between:2,5',
+                'numberOfDoors' => 'numeric|between:2,5',
             ];
         
     }
